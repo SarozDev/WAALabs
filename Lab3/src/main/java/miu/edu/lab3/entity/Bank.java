@@ -15,6 +15,10 @@ public class Bank {
     private String customer;
     private List<Transaction> transactions = new ArrayList<>();
 
+    public Bank(Integer accNumber, String customer){
+        this.accNumber = accNumber;
+        this.customer = customer;
+    }
     public void addTransaction(Transaction transaction) {
         transactions.add(transaction);
     }
