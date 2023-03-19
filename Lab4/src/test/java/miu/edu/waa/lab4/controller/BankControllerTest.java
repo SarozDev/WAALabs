@@ -143,7 +143,7 @@ public class BankControllerTest {
     }
 
     @Test
-    public void testDeleteAccount(){
+    public void testDeleteAccount() {
         //add account
         Bank bank = new Bank(11, "Ram");
         given()
@@ -163,7 +163,7 @@ public class BankControllerTest {
                 .then()
                 .statusCode(404)
                 .and()
-                .body("errorMessage",equalTo("Bank account does not exist!"));
+                .body("errorMessage", equalTo("Bank account does not exist!"));
     }
 
     private void mapBankAccountWithTransaction() {
