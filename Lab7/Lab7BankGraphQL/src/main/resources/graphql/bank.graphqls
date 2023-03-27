@@ -1,0 +1,24 @@
+type Account{
+    accountNumber: Int!
+    accountHolder:String!
+    amount: String!
+}
+
+input AccountRequest{
+    accountNumber: Int!
+    accountHolder: String!
+}
+
+enum TransactionType{
+    DEPOSIT, WITHDRAWAL
+}
+
+type Query{
+    getAccount(accountNumber: Int!) : Account
+}
+
+type Mutation{
+    createAccount(accountRequest: AccountRequest): Account
+    deposit(accountNumber: Int!, transactionType: TransactionType!, amount: Float!): Account
+    removeAccount(accountNumber: Int!): Boolean
+}
